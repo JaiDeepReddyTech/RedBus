@@ -99,25 +99,29 @@ try {
                     int choose1 = sc.nextInt();
                     switch (choose1) {
                         case 1:
-                            System.out.println("No user exist\nPlease create user");
-                            System.out.println("Enter name");
-                            String name = sc.next();
-                            System.out.println("Enter Phone Number");
-                            long cno = sc.nextInt();
-                            String gender = null;
-                            System.out.println("Select Gender\n1.Male\n2.Female");
-                            int choice3 = sc.nextInt();
-                            switch (choice3) {
-                                case 1: {
-                                    gender = "Male";
+                            if(us==null) {
+                                System.out.println("No user exist\nPlease create user");
+                                System.out.println("Enter name");
+                                String name = sc.next();
+                                System.out.println("Enter Phone Number");
+                                long cno = sc.nextInt();
+                                String gender = null;
+                                System.out.println("Select Gender\n1.Male\n2.Female");
+                                int choice3 = sc.nextInt();
+                                switch (choice3) {
+                                    case 1: {
+                                        gender = "Male";
 
+                                    }
+                                    case 2: {
+                                        gender = "Female";
+                                    }
                                 }
-                                case 2: {
-                                    gender = "Female";
-                                }
+                                us = new User(name, cno, gender, "Bangalore", "FMEPD4583G");
+                                System.out.println("\nSuccessfully user created\n");
+                            }else {
+                                System.out.println("user already Exit");
                             }
-                            us = new User(name, cno, gender, "Bangalore", "FMEPD4583G");
-                            System.out.println("Successfully user created");
                             break;
                         case 2:
                             if (us != null) {
