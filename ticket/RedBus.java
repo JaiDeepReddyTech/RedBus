@@ -100,7 +100,7 @@ try {
                     switch (choose1) {
                         case 1:
                             if(us==null) {
-                                System.out.println("No user exist\nPlease create user");
+                                System.out.println("\nPlease create user");
                                 System.out.println("Enter name");
                                 String name = sc.next();
                                 System.out.println("Enter Phone Number");
